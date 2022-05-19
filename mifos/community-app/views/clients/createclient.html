@@ -52,7 +52,8 @@
                               class="required">*</span></label>
                            <div class="col-sm-3">
                               <input type="text" id="firstname" name="firstname" ng-model="formData.firstname"  class="form-control" required
-                                ng-pattern="/(^[A-z])[A-z.'-]*/" late-Validate/>
+                                ng-pattern="/(^[a-zA-Z\u0600-\u06FF]*/" late-Validate/>
+                                <!-- ng-pattern="/(^[A-z])[A-z.'-]*/" late-Validate/> -->
                            </div>
                            <div class="col-sm-2">
                                <span ng-show="createclientform.firstname.$invalid && createclientform.firstname.$dirty">
@@ -70,7 +71,7 @@
                         <div class="form-group">
                            <label class="control-label col-sm-2" for="middlename">{{'label.input.middlename' | translate}}</label>
                            <div class="col-sm-3">
-                              <input type="text" id="middlename" name="middlename" ng-model="formData.middlename"  class="form-control" ng-pattern="/(^[A-z])[A-z.'-]*/"/>
+                              <input type="text" id="middlename" name="middlename" ng-model="formData.middlename"  class="form-control" ng-pattern="/(^[a-zA-Z\u0600-\u06FF]*/"/>
                            </div>
                            <div class="col-sm-2">
                                <span ng-show="createclientform.middlename.$invalid && createclientform.middlename.$dirty">
@@ -97,7 +98,8 @@
                            </label>
                            <div class="col-sm-3">
                               <input type="text" id="lastname" name="lastname" ng-model="formData.lastname" class="form-control"
-                                ng-pattern="/(^[A-z])[A-z.'-]*/" required late-Validate/>
+                                ng-pattern="/(^[a-zA-Z\u0600-\u06FF])[A-z.'-]*/" required late-Validate/>
+                                <!-- ng-pattern="/(^[A-z])[A-z.'-]*/" required late-Validate/> -->
                            </div>
                            <div class="col-sm-2">
                                <span ng-show="createclientform.lastname.$invalid && createclientform.lastname.$dirty">
@@ -117,7 +119,8 @@
                               class="required">*</span></label>
                            <div class="col-sm-3">
                               <input type="text" id="fullname" name="fullname" ng-model="formData.fullname" class="form-control"
-                                ng-pattern="/(^[A-z])[A-z.'-]*/" required late-Validate/>
+                                ng-pattern="/(^[a-zA-Z\u0600-\u06FF])[A-z.'-]*/" required late-Validate/>
+                                <!-- ng-pattern="/(^[A-z])[A-z.'-]*/" required late-Validate/> -->
                            </div>
                            <div class="col-sm-2">
                               <form-validate valattributeform="createclientform" valattribute="fullname"/>
