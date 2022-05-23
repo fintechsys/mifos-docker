@@ -1,8 +1,16 @@
-FROM mysql:5.5
+FROM mysql:5.7
 
 RUN apt-get update \
 	&& apt-get install -y wget unzip \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
+
+
+RUN rm -rf /etc/mysql/my.cnf
+COPY ./my.cnf /etc/mysql/my.cnf
+
+
 
 RUN mkdir -p /docker-entrypoint-initdb.d 	&& cd / 
 
@@ -13,3 +21,4 @@ COPY ./01-mifospltaform-tenants-first-time-install.sql /docker-entrypoint-initdb
 # ADD ./02-load_sample_data.sql /docker-entrypoint-initdb.d/02-load_sample_data.sql
 
 VOLUME /docker-entrypoint-initdb.d
+
