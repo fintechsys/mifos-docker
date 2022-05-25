@@ -14,6 +14,9 @@ services:
     depends_on:
       mifos-db-server:
         condition: service_healthy
+    volumes:
+        - ./mifos/community-app:/usr/local/tomcat/webapps/community-app
+
   #Mysql db service      
   mifos-db-server:
     build:
