@@ -1,6 +1,6 @@
 'use strict';
 angular.module("ngLocale", [], ["$provide", function($provide) {
-var PLURAL_CATEGORY = {ZERO: "zero", ONE: "one", TWO: "two", FEW: "few", MANY: "many", OTHER: "other"};
+var PLURAL_CATEGORY = {ZERO: "صفر", ONE: "واحد", TWO: "اثنين", FEW: "قليل", MANY: "كثير", OTHER: "أخرى"};
 $provide.value("$locale", {
   "DATETIME_FORMATS": {
     "AMPMS": [
@@ -9,13 +9,13 @@ $provide.value("$locale", {
     ],
 
     "DAY": [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
+      "السبت",
+      "الاحد",
+      "الاثنين",
+      "الثلاثاء",
+      "الاربعاء",
+      "الخميس",
+      "الجمعه"
     ],
     "MONTH": [
       "January",
@@ -32,13 +32,13 @@ $provide.value("$locale", {
       "December"
     ],
     "SHORTDAY": [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat"
+      "السبت",
+      "الاحد",
+      "الاثنين",
+      "الثلاثاء",
+      "الاربعاء",
+      "الخميس",
+      "الجمعه"
     ],
     "SHORTMONTH": [
       "Jan",
