@@ -2,14 +2,14 @@ define(['underscore'], function () {
     var styles = "";
     //console.log(localStorage.getItem('mifosX.Language'));
     if(localStorage.getItem('mifosX.Language') == '{"name":"Arabic","code":"ar"}'){
-        var styles = {
+         styles = {
             css: [
                 'fontawesome.8f41798f.css',
                 'styles.985bbaad_rtl.css'
                 ]
         };
     }else{
-        var styles = {
+         styles = {
             css: [
                 'fontawesome.8f41798f.css',
                 'styles.985bbaad.css'
