@@ -43,12 +43,12 @@
             scope.ChartsPerPage = 15;
             resourceFactory.accountCoaResource.getAllAccountCoas(function (data) {
                 scope.coadatas = scope.deepCopy(data);
-                scope.ASSET = translate.instant('ASSET') ;
-                scope.LIABILITY = translate.instant('LIABILITY') ;
+                scope.ASSET = translate.instant('الاصول') ;
+                scope.LIABILITY = translate.instant('الخصوم') ;
                 scope.EQUITY = translate.instant('EQUITY') ;
-                scope.INCOME = translate.instant('INCOME') ;
-                scope.EXPENSE = translate.instant('EXPENSE') ;
-                scope.Accounting = translate.instant('Accounting') ;
+                scope.INCOME = translate.instant('الايرادات') ;
+                scope.EXPENSE = translate.instant('المصروفات') ;
+                scope.Accounting = translate.instant('شجرة الحسابات') ;
 
                 var assetObject = {id: -1, name: scope.ASSET, parentId: -999, children: []};
                 var liabilitiesObject = {id: -2, name: scope.LIABILITY, parentId: -999, children: []};
@@ -64,15 +64,15 @@
                 }
 
                 for (i = 0; i < data.length; i++) {
-                    if (data[i].type.value == "ASSET") {
+                    if (data[i].type.value == "الاصول") {
                         if (data[i].parentId == null)  data[i].parentId = -1;
-                    } else if (data[i].type.value == "LIABILITY") {
+                    } else if (data[i].type.value == "الخصوم") {
                         if (data[i].parentId == null)  data[i].parentId = -2;
                     } else if (data[i].type.value == "EQUITY") {
                         if (data[i].parentId == null)  data[i].parentId = -3;
-                    } else if (data[i].type.value == "INCOME") {
+                    } else if (data[i].type.value == "الايرادات") {
                         if (data[i].parentId == null)  data[i].parentId = -4;
-                    } else if (data[i].type.value == "EXPENSE") {
+                    } else if (data[i].type.value == "المصروفات") {
                         if (data[i].parentId == null)  data[i].parentId = -5;
                     }
                     delete data[i].disabled;
