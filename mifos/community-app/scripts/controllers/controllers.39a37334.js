@@ -43,12 +43,12 @@
             scope.ChartsPerPage = 15;
             resourceFactory.accountCoaResource.getAllAccountCoas(function (data) {
                 scope.coadatas = scope.deepCopy(data);
-                scope.ASSET = translate.instant('ASSET') ;
-                scope.LIABILITY = translate.instant('LIABILITY') ;
+                scope.ASSET = translate.instant('الاصول') ;
+                scope.LIABILITY = translate.instant('الخصوم') ;
                 scope.EQUITY = translate.instant('EQUITY') ;
-                scope.INCOME = translate.instant('INCOME') ;
-                scope.EXPENSE = translate.instant('EXPENSE') ;
-                scope.Accounting = translate.instant('Accounting') ;
+                scope.INCOME = translate.instant('الايرادات') ;
+                scope.EXPENSE = translate.instant('المصروفات') ;
+                scope.Accounting = translate.instant('شجرة الحسابات') ;
 
                 var assetObject = {id: -1, name: scope.ASSET, parentId: -999, children: []};
                 var liabilitiesObject = {id: -2, name: scope.LIABILITY, parentId: -999, children: []};

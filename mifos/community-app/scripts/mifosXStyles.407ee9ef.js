@@ -1,11 +1,11 @@
 define(['underscore'], function () {
-    var styles = "";
+   // var styles = "";
     //console.log(localStorage.getItem('mifosX.Language'));
     if(localStorage.getItem('mifosX.Language') == '{"name":"Arabic","code":"ar"}'){
          styles = {
             css: [
                 'fontawesome.8f41798f.css',
-                'styles.985bbaad_rtl.css'
+                'rtl-styles.css'
                 ]
         };
     }else{
