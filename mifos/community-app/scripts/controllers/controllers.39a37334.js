@@ -64,15 +64,15 @@
                 }
 
                 for (i = 0; i < data.length; i++) {
-                    if (data[i].type.value == "الاصول") {
+                    if (data[i].type.value == "ASSET") {
                         if (data[i].parentId == null)  data[i].parentId = -1;
-                    } else if (data[i].type.value == "الخصوم") {
+                    } else if (data[i].type.value == "LIABILITY") {
                         if (data[i].parentId == null)  data[i].parentId = -2;
                     } else if (data[i].type.value == "EQUITY") {
                         if (data[i].parentId == null)  data[i].parentId = -3;
-                    } else if (data[i].type.value == "الايرادات") {
+                    } else if (data[i].type.value == "INCOME") {
                         if (data[i].parentId == null)  data[i].parentId = -4;
-                    } else if (data[i].type.value == "المصروفات") {
+                    } else if (data[i].type.value == "EXPENSE") {
                         if (data[i].parentId == null)  data[i].parentId = -5;
                     }
                     delete data[i].disabled;
